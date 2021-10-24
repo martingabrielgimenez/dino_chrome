@@ -1,0 +1,114 @@
+body {
+    margin: 0px;
+}
+
+#background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("background-dino.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    animation: backgroundmove 25s linear infinite;
+}
+
+#board {
+    background-color: blue;
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#player {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 230px;
+    left: 98px;
+}
+
+#player img {
+    width: 100%;
+    height: 100%;
+}
+
+.playerJump {
+    animation: playerJump 1s linear;
+}
+
+@keyframes playerJump {
+    0%{
+        bottom: 230px;
+    }
+    45%, 55%{
+        bottom: 330px;
+    }
+}
+
+@keyframes backgroundmove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 0;
+    }
+}
+
+#cactus {
+    position: absolute;
+    width: 55px;
+    height: 80px;
+    bottom: 225px;
+    right: 0;
+    animation: cactusMovement 2s linear infinite;
+}
+#cactus img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+@keyframes cactusMovement {
+    0% {
+        right: 0;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+.scoreContainer {
+    font-size: 50px;
+    text-align-last: center;
+    margin-top: 20px;
+}
+
+.button.play {
+    border-style: solid;
+    border-width: 37px 0 37px 60px;
+}
+
+.button {
+    border: 0;
+    background: transparent;
+    box-sizing: border-box;
+    width: 0px;
+    height: 74px;
+    border-color: transparent transparent transparent #202020;
+    transition: 1000ms all ease;
+    cursor: pointer;
+    border-style: double;
+    border-width: 0px 0 0px 60px;
+}
+
+.button:hover {
+    border-color: transparent transparent transparent #404040;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
